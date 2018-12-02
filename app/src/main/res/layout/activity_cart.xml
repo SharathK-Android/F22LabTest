@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CartViewActivity">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/cartlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/del_charge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cartlist"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentRight="true"
+        android:text="Delivery Charge : ₹30"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Grand Total:"
+        android:layout_alignBaseline="@+id/grand_total"
+        android:layout_toLeftOf="@+id/grand_total"
+        android:textColor="@android:color/black"
+        android:textSize="22sp"
+        android:layout_marginRight="10dp"/>
+    <TextView
+        android:id="@+id/grand_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/del_charge"
+        android:textColor="@android:color/black"
+        android:textSize="22sp"
+        android:layout_marginRight="40dp"
+        android:layout_alignParentRight="true"
+        android:text="30"
+        android:textStyle="bold"
+        />
+
+    <EditText
+        android:id="@+id/edtCoupon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textColorHint="@color/colorPrimary"
+        android:layout_below="@+id/grand_total"
+        android:hint="Enter Coupon Code"/>
+
+    <Button
+        android:id="@+id/btnApply"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_below="@+id/grand_total"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/edtCoupon"
+        android:text="APPLY"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/colorPrimary"
+        android:background="@drawable/layout_bg"
+        />
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Proceed"
+        android:layout_alignParentBottom="true"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimary"/>
+
+
+
+
+
+</RelativeLayout>
